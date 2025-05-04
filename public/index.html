@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doubt Solver Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Doubt Solver Chat</h2>
+  <button id="darkToggle">🌙 Toggle Dark Mode</button>
+  <ul id="messages"></ul>
+
+  <div id="form">
+    <input id="input" type="text" placeholder="Type your message..." autocomplete="off" />
+    <button id="sendBtn">Send</button>
+    <input type="file" id="imageInput" />
+    <div id="typingIndicator" style="margin: 5px; color: #888;"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
