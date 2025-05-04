@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://basic-chat-srlr.onrender.com");
 let username = "";
 
 // Prompt for username
