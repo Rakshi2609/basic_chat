@@ -8,6 +8,11 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
+const fs = require('fs');
+if (!fs.existsSync('./uploads')) {
+  fs.mkdirSync('./uploads');
+}
+
 // Serve public and uploads folder
 app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
@@ -67,6 +72,7 @@ io.on("connection", (socket) => {
     }
   });
 });
+const PORT = process.env.PORT || 3000;
 
 server.listen(3000, () => {
   console.log("Server running at http://localhost:3000");
